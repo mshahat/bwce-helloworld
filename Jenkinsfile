@@ -1,7 +1,7 @@
 pipeline {
   agent none
   stages {
-    stage('init') {
+    stage('validate-mvn') {
       agent {
         docker {
           image 'jenkins-agent-mvn:0.1'
