@@ -13,5 +13,16 @@ pipeline {
         sh 'mvn --version'
       }
     }
+    stage('list-repo') {
+      agent {
+        docker {
+          image 'jenkins-agent-mvn:0.1'
+        }
+
+      }
+      steps {
+        sh 'ls -ln'
+      }
+    }
   }
 }
