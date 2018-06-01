@@ -4,7 +4,7 @@ pipeline {
     stage('validate-mvn') {
       agent {
         docker {
-          image 'jenkins-agent-mvn:0.1'
+          image 'jenkins-agent-mvn:0.2'
         }
 
       }
@@ -16,7 +16,7 @@ pipeline {
     stage('list-repo') {
       agent {
         docker {
-          image 'jenkins-agent-mvn:0.1'
+          image 'jenkins-agent-mvn:0.2'
         }
 
       }
@@ -27,7 +27,7 @@ pipeline {
     stage('mvn-package') {
       agent {
         docker {
-          image 'jenkins-agent-mvn:0.1'
+          image 'jenkins-agent-mvn:0.2'
         }
 
       }
