@@ -35,7 +35,8 @@ pipeline {
         dir(path: 'bwce_ws3/helloworld.application.parent') {
           sh '''pwd
 ls -ln'''
-          sh 'mvn clean'
+          sh '''mvn clean
+mvn package'''
         }
 
       }
