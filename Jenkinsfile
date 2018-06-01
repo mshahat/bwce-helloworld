@@ -21,7 +21,7 @@ pipeline {
 
       }
       steps {
-        sh 'find .'
+        sh 'ls -ln'
       }
     }
     stage('mvn-package') {
@@ -32,6 +32,7 @@ pipeline {
 
       }
       steps {
+        dir(path: '/helloworld.application.parent')
         sh 'mvn package'
       }
     }
