@@ -32,7 +32,7 @@ pipeline {
 
       }
       steps {
-        dir(path: 'helloworld.application.parent') {
+        dir(path: 'bwce_ws3/helloworld.application.parent') {
           sh '''pwd
 ls -ln'''
         }
