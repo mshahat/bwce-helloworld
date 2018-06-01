@@ -32,7 +32,7 @@ pipeline {
 
       }
       steps {
-        dir(path: '/helloworld.application.parent')
+        dir(path: 'helloworld.application.parent')
         sh 'mvn package'
       }
     }
