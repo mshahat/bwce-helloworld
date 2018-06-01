@@ -24,5 +24,16 @@ pipeline {
         sh 'find .'
       }
     }
+    stage('mvn-package') {
+      agent {
+        docker {
+          image 'jenkins-agent-mvn:0.1'
+        }
+
+      }
+      steps {
+        sh 'mvn package'
+      }
+    }
   }
 }
